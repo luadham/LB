@@ -4,6 +4,11 @@ const app = express();
 
 app.get('/', (req, res) => {
     return res.json({ msg: 'Server C' })
-})
+});
 
-app.listen(3000);
+
+app.get('/health', (req, res) => {
+    return res.json({ msg: 'Running' })
+});
+
+app.listen(8080);
